@@ -23,10 +23,10 @@ const StyledLinks = styled.div`
         }
 
         .pDiv p {
-            transition: .2s;
             font-weight: 400;
             font-size: 20px;
             line-height: 36px;
+            letter-spacing: 1px;
         }
 
         .pDiv .hr {
@@ -35,7 +35,6 @@ const StyledLinks = styled.div`
             margin-top: -18px;
             border-radius: 10px;
             background-color: #088b844c;
-            transition: .2s;
             visibility: hidden;
         }
 
@@ -49,7 +48,7 @@ const StyledLinks = styled.div`
 
             p {
                 font-weight: 700;
-                font-size: 21px;
+                letter-spacing: 0.7px;
             }
         }
     }
