@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('bootstrap/dist/css/bootstrap.min.css');
+
+/* * {
+  outline:  1px solid red;
+} */
 
 body {
   margin: 0;
@@ -9,7 +14,8 @@ body {
 
 html, body{
   height: 100vh;
-  overflow: hidden;
+  background-color: #F8F8F8;
+  overflow-x: hidden;
 }
 
 code {

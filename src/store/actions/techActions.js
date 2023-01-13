@@ -1,7 +1,7 @@
 import getTechs from "../../services/techServices.js";
 import { techActions } from "../slices/tech-slice.js";
 
-export const fetchTechs = () => {
+export const fetchTech = () => {
   return async (dispatch) => {
     const fetchTechsInfo = async () => {
       const response = await getTechs();
@@ -10,7 +10,7 @@ export const fetchTechs = () => {
 
     try {
       const techs = await fetchTechsInfo();
-      dispatch(techActions.fetchTechs(techs));
+      dispatch(techActions.fetchTech(techs));
     } catch (error) {}
   };
 };

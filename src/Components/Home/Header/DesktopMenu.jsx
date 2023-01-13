@@ -18,7 +18,6 @@ const StyledLinks = styled.div`
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            height: 100%;
             width: 70px;
         }
 
@@ -41,14 +40,8 @@ const StyledLinks = styled.div`
         .pDiv:hover {
             cursor: pointer;
             color: #088b85;
-
             .hr {
                 visibility: visible;
-            }
-
-            p {
-                font-weight: 700;
-                letter-spacing: 0.7px;
             }
         }
     }

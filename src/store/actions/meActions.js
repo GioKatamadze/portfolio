@@ -9,8 +9,8 @@ export const fetchMes = () => {
     };
 
     try {
-      const me = await fetchMesInfo();
-      dispatch(meActions.fetchMes(me));
+      const mes = await fetchMesInfo();
+      dispatch(meActions.fetchMes(mes));
     } catch (error) {}
   };
 };

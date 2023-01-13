@@ -1,15 +1,15 @@
-import { useRef, useState } from 'react';
-import Close from '../../SVG/Close.jsx';
-import Hamburger from '../../SVG/Hamburger.jsx';
+import { useRef, useState, useEffect } from 'react';
 import { Menu } from "./Menu.jsx";
 import { DesktopMenu } from "./DesktopMenu.jsx";
 import StyledHeader from "./HeaderStyles.jsx";
+import Close from '../../../SVG/Close.jsx';
+import Hamburger from '../../../SVG/Hamburger.jsx';
 
 
-export const Header = (props) => {
+const Header = (props) => {
     const [menuStatus, setMenuStatus] = useState(false);
     const backdropRef = useRef();
-  
+
     const openMenu = () => {
       setMenuStatus(true);
     };
@@ -50,4 +50,6 @@ export const Header = (props) => {
       </StyledHeader>
     );
   };
+
+  export default Header
   

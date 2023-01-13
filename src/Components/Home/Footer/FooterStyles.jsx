@@ -1,17 +1,16 @@
-import profileImage from "./profileImg.png"
 import styled from "styled-components";
+import profileImage from "./profileImg.png"
 
-const StyledHeader = styled.div`
+const StyledFooter = styled.div`
     width: 100vw;
-    height: 75px;
+    height: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    flex-direction: row;
-    background-color: #F8F8F8;
-    z-index: 100;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 25px 20px -20px;
+    background-color: #088b85;
 
     #title-box {
       display: flex;
@@ -20,20 +19,20 @@ const StyledHeader = styled.div`
       flex-direction: row;
       flex-wrap: nowrap;
       margin-left: 10vw;
-      margin-top: -5px;
     }
 
     #title-box h2 {
-      margin-left: 19px;
-      color: #3a3344;
+      margin-left: 10px;
+      margin-top: 5px;
+      color: #FFFFFF;
       transition: .2s;
       font-weight: 700;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     .profileImage {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border-radius: 100%;
       background-image: url(${profileImage});
       background-size: cover;
@@ -42,42 +41,34 @@ const StyledHeader = styled.div`
     #title-box:hover {
       cursor: pointer;
 
-      h2 {
-        color: #088b85;
-      }
       .profileImage {
-        outline: 2px solid #088b85;
+        outline: 2px solid #FFFFFF;
       }
     }
 
-
-    .menuIcon {
+    .links {
       margin-right: 10vw;
-      z-index: 1000;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
-    .menuIcon:hover {
-      cursor: pointer;
-    }
-
-    .menuDiv {
-      width: 100vw;
-      height: 100vh; 
-      position: absolute;
-      top: 0; 
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.2); 
+    .links a {
+      margin: 7px;
+      margin-left: 10px;
     }
 
     @media (min-width: 768px) {
-      .menuIcon, .menuDiv {
-        display: none;
+      .profileImage {
+      width: 40px;
+      height: 40px;
       }
 
       #title-box {
       margin-top: 0;
+      font-size: 25px;
     }
     }
 `
 
-export default StyledHeader
+export default StyledFooter

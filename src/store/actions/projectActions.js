@@ -1,7 +1,7 @@
 import getProjects from "../../services/projectServices.js";
 import { projectActions } from "../slices/project-slice.js";
 
-export const fetchProjects = () => {
+export const fetchProject = () => {
   return async (dispatch) => {
     const fetchProjectsInfo = async () => {
       const response = await getProjects();
@@ -10,7 +10,7 @@ export const fetchProjects = () => {
 
     try {
       const projects = await fetchProjectsInfo();
-      dispatch(projectActions.fetchProjects(projects));
+      dispatch(projectActions.fetchProject(projects));
     } catch (error) {}
   };
 };

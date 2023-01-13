@@ -1,10 +1,7 @@
-// import instance from "./axios.js";
-import axios from "axios";
+import instance from "./axios.js";
 
 const getMes = () => {
-  return axios.get(
-    "https://portfolio-api-production-99be.up.railway.app/api/mes"
-  );
+  return instance.get("/mes");
 };
 
 export default getMes;
