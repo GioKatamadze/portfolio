@@ -42,6 +42,10 @@ export const StyledWrapper = styled.div`
             font-size: 20px;
         }
     }
+
+    @media (min-width: 1000px) {
+        margin-top: 50px;
+    }
 `
 
 export const StyledCarousel = styled.div`

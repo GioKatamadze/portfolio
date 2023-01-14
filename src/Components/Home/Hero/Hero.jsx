@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import { fetchTech } from '../../../store/actions/techActions.js';
+import { fetchSkill } from '../../../store/actions/skillActions.js';
 import StyledHero from './HeroStyles.jsx';
 
 
 const Hero = (props) => {
     const techs = useSelector((state) => state.techs.items);
+    const skills = useSelector((state) => state.skills.items);
     const dispatch = useDispatch();
     
     const listItems = techs.map((tech) => {
@@ -19,28 +21,45 @@ const Hero = (props) => {
             </div>
         ) 
     });
+
+    const listSkills = skills.map((skill) => {
+        return (        
+            <div className='li' key={skill.name}>
+                <img
+                    src={process.env.REACT_APP_API_URL + "/icons/" + skill.icon}
+                    alt="carousel slide"
+                />
+                {skill.name}
+            </div>
+        ) 
+    });
     
 
     useEffect(() => {
-        dispatch(fetchTech());
+        dispatch(fetchTech())
+        dispatch(fetchSkill());
     }, [dispatch]);
 
     return (
         <StyledHero>
             <div className='titleWrapper'>
                 <h1>Full Stack Developer</h1>
-                <div className='ps'>
-                    <p>Hello, I am Gio.</p> 
-                    <p>As a developer, you'll find in me someone deeply enthusiastic about code architecture and performance.</p> 
-                    <p>As a teammate, someone who values direct communication and likes to integrate and talk with everyone.</p> 
-                    <p>My mission is to bring excellent project satisfaction by providing quality and professional work.</p>
+                <div className='techWrapper'>
+                    <div className='techItems'>{listItems}</div>
                 </div>
-
+            </div>
+            
+            <div className='andWrapper' >
+                <div className='and'>&</div>
             </div>
 
-            <div className='techWrapper'>
-                <div className='techItems'>{listItems}</div>
+            <div className='titleWrapper2'>
+                <h1>Business Manager</h1>
+                <div className='techWrapper2'>
+                    <div className='techItems2'>{listSkills}</div>
+                </div>
             </div>
+
         </StyledHero>
     )
 }

@@ -19,7 +19,7 @@ const ControlledCarousel = (props) => {
         const nameArray = project.tech_name
 
         return (
-            <Carousel.Item key={project.project_id} interval={1700} className='width'>
+            <Carousel.Item key={project.project_id} interval={800} className='width'>
                 <StyledItem>
                     <div className='thumbnail'>
                         <img 

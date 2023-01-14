@@ -10,7 +10,7 @@ const StyledLinks = styled.div`
         flex-direction: row;
         flex-wrap: nowrap;
         height: 100%;
-        margin-right: 10vw;
+        margin-right: 5vw;
         gap: 30px;
 
         .pDiv {
@@ -44,6 +44,10 @@ const StyledLinks = styled.div`
                 visibility: visible;
             }
         }
+    }
+
+    @media (min-width: 1000px) {
+        margin-right: 10vw;
     }
 `
 

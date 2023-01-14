@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.div`
     width: 100vw;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
     flex-direction: row;
     background-color: #F8F8F8;
     z-index: 100;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 25px 20px -20px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 20px -20px;
 
     #title-box {
       display: flex;
@@ -19,7 +19,7 @@ const StyledHeader = styled.div`
       align-items: center;
       flex-direction: row;
       flex-wrap: nowrap;
-      margin-left: 10vw;
+      margin-left: 5vw;
     }
 
     #title-box h2 {
@@ -52,7 +52,7 @@ const StyledHeader = styled.div`
 
 
     .menuIcon {
-      margin-right: 10vw;
+      margin-right: 5vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -85,6 +85,12 @@ const StyledHeader = styled.div`
       #title-box {
       margin-top: 0;
       font-size: 25px;
+    }
+    }
+
+    @media (min-width: 1000px) {
+      #title-box {
+      margin-left: 10vw;
     }
     }
 `

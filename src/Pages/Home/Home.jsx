@@ -1,6 +1,8 @@
 import Header from "../../Components/Home//Header/Header.jsx";
 import Hero from "../../Components/Home/Hero/Hero.jsx";
+import Paragraph from "../../Components/Home/Paragraph/Paragraph.jsx";
 import ControlledCarousel from "../../Components/Home/HomeProjects/HomeProjects.jsx"
+import Contact from "../../Components/Home/Contact/Contact.jsx";
 import Footer from "../../Components/Home/Footer/Footer.jsx";
 
 import styled from "styled-components";
@@ -20,7 +22,9 @@ const Home = () => {
         <HomePage>
             <Header />
             <Hero />
+            <Paragraph />
             <ControlledCarousel />
+            <Contact />
             <Footer />
         </HomePage>
     )
