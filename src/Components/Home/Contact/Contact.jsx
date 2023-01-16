@@ -3,26 +3,42 @@ import { useState } from "react";
 import StyledContact from "./ContactStyles.jsx";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+
+const [mailerState, setMailerState] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+function handleStateChange(e) {
+setMailerState((prevState) => ({
+    ...prevState,
+    [e.target.name]: e.target.value,
+}));
+}
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const data = {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
-    };
-
-    const response = await axios.post(
-      "https://portfolio-api-production-99be.up.railway.app/api/sendemail",
-      data
-    );
+    const response = await fetch("https://portfolio-api-production-99be.up.railway.app/api/sendemail", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ mailerState }),
+      })
+        .then((res) => res.json())
+        .then(() => {
+          setMailerState({
+            email: "",
+            name: "",
+            subject: "",
+            message: "",
+          });
+        });
   };
+
 
   return (
     <StyledContact>
@@ -32,28 +48,32 @@ const Contact = () => {
                 type="text"
                 placeholder="Full Name"
                 required
-                value={name}
-                onChange={(e) => setName(e.target.value)} />
+                name="name"
+                value={mailerState.name}
+                onChange={handleStateChange} />
 
             <input
                 type="email"
                 placeholder="Email"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)} />
+                name="email"
+                value={mailerState.email}
+                onChange={handleStateChange} />
 
             <input
                 type="text"
                 placeholder="Subject"
                 required
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)} />
+                name="subject"
+                value={mailerState.subject}
+                onChange={handleStateChange} />
 
             <textarea
                 placeholder="Message"
                 required
-                value={message}
-                onChange={(e) => setMessage(e.target.value)} />
+                name="message"
+                value={mailerState.message}
+                onChange={handleStateChange} />
 
                 <button type="submit">Send Email</button>
             </form>
