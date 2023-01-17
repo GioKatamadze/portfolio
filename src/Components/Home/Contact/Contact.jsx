@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import StyledContact from "./ContactStyles.jsx";
 
@@ -6,7 +5,7 @@ const Contact = () => {
 
 const [mailerState, setMailerState] = useState({
     name: "",
-    email: "",
+    emailValue: "",
     subject: "",
     message: "",
   });
@@ -30,8 +29,9 @@ setMailerState((prevState) => ({
       })
         .then((res) => res.json())
         .then(() => {
+            console.log(mailerState)
           setMailerState({
-            email: "",
+            emailValue: "",
             name: "",
             subject: "",
             message: "",
@@ -56,8 +56,8 @@ setMailerState((prevState) => ({
                 type="email"
                 placeholder="Email"
                 required
-                name="email"
-                value={mailerState.email}
+                name="emailValue"
+                value={mailerState.emailValue}
                 onChange={handleStateChange} />
 
             <input

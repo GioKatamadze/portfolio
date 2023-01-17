@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { fetchProject } from '../../../store/actions/projectActions.js';
 import Carousel from 'react-bootstrap/Carousel';
 import { StyledWrapper, StyledCarousel, StyledItem } from './StyledProjects.jsx';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const ControlledCarousel = (props) => {
+    const location = useLocation();
     const projects = useSelector((state) => state.projects.items);
     const dispatch = useDispatch();
     const [index, setIndex] = useState(0);
@@ -63,7 +65,7 @@ const ControlledCarousel = (props) => {
                 <Carousel activeIndex={index} onSelect={handleSelect} className="carouselitem">
                     {CustomCarouselItem}
                 </Carousel>
-                <div className='button' >View All Projects</div>
+                <Link to={'/projects'} state={{ from: location }} className='button' >View All Projects</Link>
             </StyledCarousel>
         </StyledWrapper>
     )

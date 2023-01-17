@@ -23,7 +23,7 @@ export const StyledWrapper = styled.div`
         padding: 5px;
         border-radius: 8px;
         transition: .1s;
-        :hover {
+        :active {
             cursor: pointer;
             background-color: #2792f0;
             transform: translate(1px, -1px);
