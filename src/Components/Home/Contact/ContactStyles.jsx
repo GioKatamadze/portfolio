@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 const StyledContact = styled.div`
+    scroll-margin-top: 100px;
     width: 100vw;
-    height: 500px;
+    height: max-content;
     margin-top: 50px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #007bff;
+    background-color: #007bff36;
 
     .formWrapper {
-        width: 500px;
+        width: 100%;
         height: auto;
         background-color: white;
         border: 1px solid transparent;
@@ -34,25 +36,33 @@ const StyledContact = styled.div`
     input, textarea {
         border: none;
         width: 100%;
-        margin-top: 5px;
+        margin-top: 10px;
         padding: 5px;
         border-bottom: 1px solid #25252574;
     }
 
     button {
-        font-size: 15px;
-        font-weight: 400;
-        padding: 6px 8px;
-        margin: 0 5px 0 0;
-        border: 1px solid transparent;
-        border-radius: 3px;
-        cursor: pointer;
+        width: 160px;
+        height: 40px;
+        background-color: #2792f0;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.3s;
-        color: #fff;
-        background-color: #007bff;
+        padding: 5px;
+        border-radius: 8px;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: .1s;
+        box-shadow: #78b8ef -4px 4px;
+        :active {
+            cursor: pointer;
+            background-color: #2792f0;
+        }
     }
 `
 

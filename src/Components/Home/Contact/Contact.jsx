@@ -41,7 +41,7 @@ setMailerState((prevState) => ({
 
 
   return (
-    <StyledContact>
+    <StyledContact id="contact">
         <div className="formWrapper">
             <form className="form" onSubmit={sendEmail}>
             <input

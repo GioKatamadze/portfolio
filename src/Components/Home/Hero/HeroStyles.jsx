@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const StyledHero = styled.div`
     width: 90vw;
     height: max-content;
-    margin-top: 35px;
+    margin-top: 100px;
+    scroll-margin-top: 100px;
     padding: 20px 20px 30px 20px;
     display: flex;
     justify-content: center;
@@ -12,8 +13,7 @@ const StyledHero = styled.div`
     flex-wrap: nowrap;
     border-radius: 10px;
     background-color: #FFFFFF;
-    transform: translate(2px, -2px);
-    outline: 4px solid #3e3b4099; 
+    border: 4px solid #3e3b4099; 
     box-shadow: #8fedd9 -8px 8px;
     
     .titleWrapper {
@@ -22,9 +22,11 @@ const StyledHero = styled.div`
         align-items: center;
         flex-direction: column;
         text-align: center;   
-        h1 {
+        h2 {
+            font-size: 20px;
             font-weight: 900;
             color: #27a39d;
+            margin-bottom: 15px;
         }
     }
 
@@ -34,8 +36,10 @@ const StyledHero = styled.div`
         align-items: center;
         flex-direction: column;
         text-align: center;   
-        h1 {
+        h2 {
             margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 20px;
             font-weight: 900;
             color: #27a39d;
         }
@@ -82,7 +86,7 @@ const StyledHero = styled.div`
         font-weight: 400;
         font-size: 15px;
         border-radius: 5px;
-        outline: 1.5px solid #9aead9; 
+        border: 1.5px solid #9aead9; 
         img {
             margin-right: 5px;
         }
@@ -91,7 +95,7 @@ const StyledHero = styled.div`
     .li:hover {
             transition: .2s;
             transform: translate(1px, -2px);
-            outline: 1.5px solid #2998fa; 
+            border: 1.5px solid #2998fa; 
             box-shadow: #A7F0E0 -4px 4px;
             cursor: pointer;
         }
@@ -112,19 +116,21 @@ const StyledHero = styled.div`
         }
 
     @media (min-width: 600px) {
+        margin-top: 100px;
         width: 90vw;
     }
 
     @media (min-width: 1000px) {
+        scroll-margin-top: 200px;
         width: 80vw;
         height: 100%;
-        margin-top: 50px;
+        margin-top: 100px;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
         padding: 20px 30px 30px 30px;
         transform: translate(2px, -2px);
-        outline: 4px solid #3e3b4099; 
+        border: 4px solid #3e3b4099; 
         box-shadow: #A7F0E0 -10px 10px;
         position: relative;
 
@@ -191,7 +197,7 @@ const StyledHero = styled.div`
         .li:hover {
             transition: .2s;
             transform: translate(1px, -2px);
-            outline: 2px solid #2998fa; 
+            border: 2px solid #2998fa; 
             box-shadow: #A7F0E0 -5px 5px;
             cursor: pointer;
         }

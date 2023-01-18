@@ -4,6 +4,8 @@ import styled from "styled-components";
 const StyledHeader = styled.div`
     width: 100vw;
     height: 70px;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -20,15 +22,15 @@ const StyledHeader = styled.div`
       flex-direction: row;
       flex-wrap: nowrap;
       margin-left: 5vw;
+      text-decoration: none;
     }
 
     #title-box h2 {
       margin-left: 10px;
-      margin-top: 5px;
-      color: #3a3344;
+      color: #088b85;
       transition: .2s;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 19px;
     }
 
     .profileImage {
@@ -37,22 +39,17 @@ const StyledHeader = styled.div`
       border-radius: 100%;
       background-image: url(${profileImage});
       background-size: cover;
+      outline: 2px solid #088b85;
     }
 
     #title-box:hover {
       cursor: pointer;
-
-      h2 {
-        color: #088b85;
-      }
-      .profileImage {
-        outline: 2px solid #088b85;
-      }
     }
 
 
     .menuIcon {
       margin-right: 5vw;
+      margin-top: 6px;
       display: flex;
       justify-content: center;
       align-items: center;

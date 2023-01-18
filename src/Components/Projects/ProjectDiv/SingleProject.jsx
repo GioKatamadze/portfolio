@@ -1,7 +1,7 @@
 import { fetchProject } from '../../../store/actions/projectActions.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { StyledWrapper, StyledItem } from './SingleProjectStyles.jsx';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Arrow from "../../../SVG/ArrowUp.jsx"
 import Globe from "./Globe.jsx"
@@ -15,10 +15,11 @@ const SingleProject = (props) => {
         const iconArray = project.tech_icon
         const nameArray = project.tech_name
         const contentsArray = project.content
+        
 
         return (
                     <StyledItem 
-                    key={project.thumbnail} 
+                    key={project.thumbnail}           
                     >
                         <h3 id='projectTitle' >{project.title}</h3>
                         <div className='thumbnail'>
@@ -94,7 +95,7 @@ const SingleProject = (props) => {
     }, [dispatch]);
 
     return (
-        <StyledWrapper>
+        <StyledWrapper >
             {EachProject}
         </StyledWrapper>
     )

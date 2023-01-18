@@ -1,21 +1,23 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
-    width: 80vw;
+    width: 90vw;
     margin-top: 50px;
+    scroll-margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .width {
-        width: 80vw;
+        width: 90vw;
     }
     .button {
         width: 160px;
         height: 40px;
         background-color: #2792f0;
         color: white;
-        font-size: 18px;
+        text-decoration: none;
+        font-size: 16px;
         font-weight: 700;
         display: flex;
         justify-content: center;
@@ -23,11 +25,11 @@ export const StyledWrapper = styled.div`
         padding: 5px;
         border-radius: 8px;
         transition: .1s;
+        transform: translate(1px, -1px);
+        box-shadow: #78b8ef -4px 4px;
         :active {
             cursor: pointer;
             background-color: #2792f0;
-            transform: translate(1px, -1px);
-            box-shadow: #78b8ef -4px 4px;
         }
     }
 
@@ -44,13 +46,14 @@ export const StyledWrapper = styled.div`
     }
 
     @media (min-width: 1000px) {
+        scroll-margin-top: 100px;
         margin-top: 50px;
     }
 `
 
 export const StyledCarousel = styled.div`
     padding: 20px;
-    width: 80vw;
+    width: 90vw;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -58,7 +61,7 @@ export const StyledCarousel = styled.div`
     align-items: center;
     overflow-x: hidden;
     background-color: #FFFFFF;
-    outline: 4px solid #3e3b4099; 
+    border: 4px solid #3e3b4099; 
     box-shadow: #9ccaf2fc -10px 11px;
     border-radius: 10px;
     .carouselitem {

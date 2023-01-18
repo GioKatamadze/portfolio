@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
     width: 100vw;
-    margin-top: 30px;
+    margin-top: 100px;
+    scroll-margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +19,7 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledItem = styled.div`
+    scroll-margin-top: 100px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -27,7 +29,7 @@ export const StyledItem = styled.div`
     border-radius: 10px;
     background-color: #FFFFFF;
     margin-bottom: 30px;
-    transition: .3s;
+    transition: .2s;
 
     #projectTitle {
             font-size: 20px;
@@ -35,19 +37,19 @@ export const StyledItem = styled.div`
             height: auto;
             text-align: center;
             margin-bottom: 18px;
-            color: #2792f0;
+            color: #107b76;
     }
 
     .thumbnailImage {
         width: 80vw;
-        box-shadow: rgba(3, 101, 214, 0.511) 0px 0px 0px 3px, rgba(3, 102, 214, 0.12) 0px 2px 4px 0px, rgba(3, 102, 214, 0.32) 0px 2px 16px 0px;
+        box-shadow: #27a39d 0px 0px 0px 2px;
         border-radius: 10px;
     }
 
     .description {
         visibility: hidden;
         height: 0;
-        transition: .3s;
+        transition: .2s;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -100,7 +102,7 @@ export const StyledItem = styled.div`
         font-weight: 400;
         font-size: 15px;
         border-radius: 5px;
-        outline: 1.5px solid #9aead9; 
+        border: 1.5px solid #9aead9; 
         .icon {
             margin-right: 4px;
             width: 18px;
@@ -111,7 +113,7 @@ export const StyledItem = styled.div`
     .eachItem:hover {
         transition: .2s;
         transform: translate(1px, -2px);
-        outline: 1.5px solid #2998fa; 
+        border: 1.5px solid #2998fa; 
         box-shadow: #A7F0E0 -4px 4px;
         cursor: pointer;
     }
@@ -129,27 +131,24 @@ export const StyledItem = styled.div`
     .link {
         width: 100%;
         height: 40px;
-        background-color: #2792f0;
+        background-color: #0e847e;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
         padding: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         border-radius: 8px;
-        transition: .3s;
+        transition: .2s;
+        box-shadow: #0de2d7 -4px 4px;
         :active {
             cursor: pointer;
-            background-color: #2792f0;
-            transform: translate(1px, -1px);
-            box-shadow: #78b8ef -4px 4px;
         }
-
         p {
             display: block;
             margin-left: 5px;
             color: white;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 700;
             text-decoration: none;
         }
@@ -161,28 +160,25 @@ export const StyledItem = styled.div`
         align-items: center;
         flex-wrap: nowrap;
         text-decoration: none;
+        margin-left: -4px;
     }
 
     .arrow {
-        transform: scale(2.5) rotate(180deg);
+        transform: scale(2) rotate(180deg);
         margin-top: 25px;
     }
 
-    :hover, :active {
+    :active, :hover {
         outline: 4px solid #3e3b40f0; 
         box-shadow: #65e7cb -8px 10px;
+        scroll-margin-top: 100px;
 
         .description {
-        visibility: visible;
-        height: auto;
-        margin-top: 15px;
-
-        .arrow {
-        transform: rotate(0deg);
-        margin-top: 15px;
-        }
+            visibility: visible;
+            height: auto;
+            margin-top: 15px;
     }
-    }
+}
 
 
     @media (min-width: 500px) {

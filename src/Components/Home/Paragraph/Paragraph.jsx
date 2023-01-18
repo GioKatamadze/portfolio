@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const StyledParagraph = styled.div`
+    scroll-margin-top: 200px;
     margin-top: 40px;
     width: 100vw;
     height: auto;
     padding: 20px 7vw;
-    background-color: #494b4b23;
+    background-color: #32b5a422;
 
     .ps {
             margin-top: 10px;
@@ -32,7 +33,7 @@ const StyledParagraph = styled.div`
 
 const Paragraph = () => {
     return (
-        <StyledParagraph>
+        <StyledParagraph id="about">
                 <div className='ps'>
                     <p>Hello, I am Gio.</p> 
                     <p>As a developer, you'll find in me someone deeply enthusiastic about code architecture and performance.</p> 

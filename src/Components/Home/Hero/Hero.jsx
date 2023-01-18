@@ -41,9 +41,9 @@ const Hero = (props) => {
     }, [dispatch]);
 
     return (
-        <StyledHero>
+        <StyledHero id='home'>
             <div className='titleWrapper'>
-                <h1>Full Stack Developer</h1>
+                <h2>Full Stack Developer</h2>
                 <div className='techWrapper'>
                     <div className='techItems'>{listItems}</div>
                 </div>
@@ -54,7 +54,7 @@ const Hero = (props) => {
             </div>
 
             <div className='titleWrapper2'>
-                <h1>Business Manager</h1>
+                <h2>Business Manager</h2>
                 <div className='techWrapper2'>
                     <div className='techItems2'>{listSkills}</div>
                 </div>

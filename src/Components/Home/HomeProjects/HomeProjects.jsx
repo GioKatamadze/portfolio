@@ -60,12 +60,12 @@ const ControlledCarousel = (props) => {
     }, [dispatch]);
 
     return (
-        <StyledWrapper>
+        <StyledWrapper id='projects'>
             <StyledCarousel>
                 <Carousel activeIndex={index} onSelect={handleSelect} className="carouselitem">
                     {CustomCarouselItem}
                 </Carousel>
-                <Link to={'/projects'} state={{ from: location }} className='button' >View All Projects</Link>
+                <Link to={'/projects'} state={{ from: "/" }} className='button' >View All Projects</Link>
             </StyledCarousel>
         </StyledWrapper>
     )

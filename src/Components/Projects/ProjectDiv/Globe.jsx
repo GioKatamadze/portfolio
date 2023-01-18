@@ -3,7 +3,7 @@ const Globe = () => {
       <svg 
       width="20px" 
       height="20px" 
-      fill="#007ACC" 
+      fill="#ffffff" 
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 512 512"
       >

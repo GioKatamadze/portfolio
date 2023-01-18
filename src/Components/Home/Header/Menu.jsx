@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import GithubLink from '../../../SVG/GithubLink.jsx';
 import LinkedinLink from '../../../SVG/LinkedinLink.jsx';
+import { HashLink } from 'react-router-hash-link';
+import { Link, useLocation } from 'react-router-dom';
 
 const StyledMenu = styled.div`
   width: 50%;
@@ -12,30 +14,38 @@ const StyledMenu = styled.div`
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   overflow: hidden;
 
-p {
-  margin-left: 20px;
-  transition: .1s;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 36px;
-}
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
 
-p:hover {
-  cursor: pointer;
-  color: #088b85;
-  font-weight: 700;
-}
+  .nostyle {
+    text-decoration: none;
+    margin-left: 20px;
+    transition: .1s;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 36px;
+    color: #088b85;
+    :hover {
+        cursor: pointer;
+        color: #07746f;
+        font-weight: 700;
+    }
+  }
 
 .links {
   display: flex;
   width: 100%;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 10px;
 }
 
 .links a {
-  margin: 7px;
-  margin-left: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -47,10 +57,11 @@ p:hover {
 export const Menu = (props) => {
     return (
       <StyledMenu>
-        <p>Home</p>
-        <p>About</p>
-        <p>Projects</p>
-        <p>Contact</p>
+            <HashLink className="nostyle" smooth to="/#home">Home</HashLink>
+            <HashLink className="nostyle" smooth to="/#about">About</HashLink>
+            <Link to={'/projects'} state={{ from: "/" }} className='nostyle' >Projects</Link>
+            <HashLink className="nostyle" smooth to="/#contact">Contact</HashLink>
+
         <div className='links'>
           <a href="https://github.com/GioKatamadze" target="_blank">
             <GithubLink />
