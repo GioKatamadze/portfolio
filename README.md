@@ -2,7 +2,7 @@
 
 ### Links
 
-- Live Site URL: [Live](https://vocal-paprenjak-6f9f8e.netlify.app/)
+- Live Site URL: [Live](https://giokatamadze.netlify.app)
 - Frontend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-front)
 - Frontend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-API)
 
@@ -10,9 +10,11 @@
 
 - React JS
 - Node JS
-- Express/Rest API
+- Express/ Rest API/ Axios
+- Styled omponents
 - js/jsx/yaml
 - Tailwind
+- Bootstrap
 - Redux
 - Swagger
 - MongoDB
