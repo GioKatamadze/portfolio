@@ -3,8 +3,8 @@
 ### Links
 
 - Live Site URL: [Live](https://giokatamadze.netlify.app)
-- Frontend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-front)
-- Frontend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-API)
+- Frontend URL: [GitHub Code](https://github.com/GioKatamadze/portfolio-front)
+- Frontend URL: [GitHub Code](https://github.com/GioKatamadze/portfolio-api)
 
 ### Built with
 
