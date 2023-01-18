@@ -21,14 +21,37 @@ const SingleProject = (props) => {
                     <StyledItem 
                     key={project.thumbnail}           
                     >
-                        <h3 id='projectTitle' >{project.title}</h3>
-                        <div className='thumbnail'>
-                            <img 
-                                className='thumbnailImage'
-                                src={process.env.REACT_APP_API_URL + "/images/" + project.thumbnail}
-                                alt="carousel slide"
-                            />
+                        <div className='titleImg'>
+                            <h3 id='projectTitle' >{project.title}</h3>
+                            <div className='thumbnail'>
+                                <img 
+                                    className='thumbnailImage'
+                                    src={process.env.REACT_APP_API_URL + "/images/" + project.thumbnail}
+                                    alt="carousel slide"
+                                />
+                            </div>
+                            <div className='mobileLinkButtons' >
+                                <div className='mobileLink'>
+                                    <a href={project.live_link} target="_blank">
+                                        <Globe /> 
+                                        <p>Live Website</p>
+                                    </a>
+                                </div>
+                                <div className='mobileLink'>
+                                    <a href={project.front_link} target="_blank">
+                                        <GitHub /> 
+                                        <p>Front End Code</p>
+                                    </a>
+                                </div>
+                                <div className='mobileLink' style={{display: project.back_link === "" ? 'none' : 'flex'}}>
+                                    <a href={project.back_link} target="_blank">
+                                        <GitHub /> 
+                                        <p>Back End Code</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+
 
                         <div className="description">
 
@@ -59,7 +82,7 @@ const SingleProject = (props) => {
                                 })}
                             </div>
 
-                            <h2>Links</h2>
+                            <h2 id='mobileH2'>Links</h2>
                             <div className='linkButtons'>
                                 <div className='link'>
                                     <a href={project.live_link} target="_blank">

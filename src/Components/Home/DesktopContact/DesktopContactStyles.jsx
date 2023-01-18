@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-const StyledContact = styled.div`
+const DesktopStyledContact = styled.div`
     scroll-margin-top: 100px;
-    width: 100%;
+    width: 100vw;
     height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #2792f030;
+    margin-top: 55px;
+    padding: 30px 0; 
 
     .formWrapper {
-        width: 100%;
+        width: 90%;
         height: auto;
         background-color: white;
         border: 1px solid transparent;
@@ -66,6 +69,10 @@ const StyledContact = styled.div`
             background-color: #2792f0;
         }
     }
+
+    @media (min-width: 800px) {
+        display: none;
+    }
 `
 
-export default StyledContact
+export default DesktopStyledContact

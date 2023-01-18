@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
     width: 90vw;
-    margin-top: 50px;
+    margin-top: 45px;
     scroll-margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ export const StyledWrapper = styled.div`
     }
 
     @media (min-width: 500px) {
-        margin-top: 70px;
+        margin-top: 45px;
     }
 
     @media (min-width: 900px) {
@@ -46,8 +46,9 @@ export const StyledWrapper = styled.div`
     }
 
     @media (min-width: 1000px) {
+        width: 80vw;
         scroll-margin-top: 100px;
-        margin-top: 50px;
+        margin-top: 70px;
     }
 `
 
@@ -71,6 +72,10 @@ export const StyledCarousel = styled.div`
     }
     @media (min-width: 500px) {
         padding: 30px;
+    }
+
+    @media (min-width: 1000px) {
+        width: 80vw;
     }
 `
 
@@ -114,14 +119,14 @@ export const StyledItem = styled.div`
             text-align: left;
         }
         .thumbnailImage {
-            width: 60vw;
+            width: 50vw;
         }
     }
 
     @media (min-width: 700px) {
         height: 430px;
         .thumbnailImage {
-            width: 65vw;
+            width: 50vw;
         }
     }
 
@@ -137,7 +142,7 @@ export const StyledItem = styled.div`
             align-items: center;
         }
         .thumbnailImage {
-            width: 80%;
+            width: 70%;
         }
         .textBox {
             width: 40%;

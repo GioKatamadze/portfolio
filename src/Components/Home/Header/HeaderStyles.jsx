@@ -34,12 +34,12 @@ const StyledHeader = styled.div`
     }
 
     .profileImage {
-      width: 30px;
-      height: 30px;
+      width: 31px;
+      height: 31px;
       border-radius: 100%;
       background-image: url(${profileImage});
       background-size: cover;
-      outline: 2px solid #088b85;
+      border: 2px solid #088b85;
     }
 
     #title-box:hover {

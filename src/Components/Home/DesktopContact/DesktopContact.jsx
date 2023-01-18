@@ -1,7 +1,7 @@
 import { useState } from "react";
-import StyledContact from "./ContactStyles.jsx";
+import DesktopStyledContact from "./DesktopContactStyles.jsx";
 
-const Contact = () => {
+const DesktopContact = () => {
 
 const [mailerState, setMailerState] = useState({
     name: "",
@@ -41,7 +41,7 @@ setMailerState((prevState) => ({
 
 
   return (
-    <StyledContact id="contact2">
+    <DesktopStyledContact id="contact">
         <div className="formWrapper">
             <form className="form" onSubmit={sendEmail}>
             <input
@@ -79,9 +79,9 @@ setMailerState((prevState) => ({
                 <button type="submit">Send Email</button>
             </form>
         </div>
-    </StyledContact>
+    </DesktopStyledContact>
 
   );
 }
 
-export default Contact;
+export default DesktopContact;

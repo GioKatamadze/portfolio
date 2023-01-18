@@ -73,11 +73,6 @@ export const DesktopMenu = () => {
             <Link to={'/projects'} state={{ from: "/" }} className='nostyle' >Projects</Link>
             <div className="hr"></div>
             </div>
-
-            <div className="linkDiv">
-            <HashLink className="nostyle" smooth to="/#contact">Contact</HashLink>
-            <div className="hr"></div>
-            </div>
         </StyledLinks>
     )
 }

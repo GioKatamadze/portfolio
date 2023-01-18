@@ -2,6 +2,7 @@ import Header from "../../Components/Home//Header/Header.jsx";
 import Hero from "../../Components/Home/Hero/Hero.jsx";
 import Paragraph from "../../Components/Home/Paragraph/Paragraph.jsx";
 import ControlledCarousel from "../../Components/Home/HomeProjects/HomeProjects.jsx"
+import DesktopContact from "../../Components/Home/DesktopContact/DesktopContact.jsx";
 import Contact from "../../Components/Home/Contact/Contact.jsx";
 import Footer from "../../Components/Home/Footer/Footer.jsx";
 
@@ -24,7 +25,7 @@ const Home = () => {
             <Hero />
             <Paragraph />
             <ControlledCarousel />
-            <Contact />
+            <DesktopContact />
             <Footer />
         </HomePage>
     )

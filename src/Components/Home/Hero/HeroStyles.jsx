@@ -23,7 +23,7 @@ const StyledHero = styled.div`
         flex-direction: column;
         text-align: center;   
         h2 {
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 900;
             color: #27a39d;
             margin-bottom: 15px;
@@ -39,7 +39,7 @@ const StyledHero = styled.div`
         h2 {
             margin-top: 25px;
             margin-bottom: 15px;
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 900;
             color: #27a39d;
         }
@@ -74,7 +74,6 @@ const StyledHero = styled.div`
     }
 
     .li {
-        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
         height: max-content;
         width: max-content;
         padding: 4px;
@@ -101,14 +100,14 @@ const StyledHero = styled.div`
         }
     
         .and {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             display: flex;
             margin-top: 30px;
             justify-content: center;
             align-items: center;
             border-radius: 100%;
-            font-size: 25px;
+            font-size: 22px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
             color: white;
@@ -116,7 +115,7 @@ const StyledHero = styled.div`
         }
 
     @media (min-width: 600px) {
-        margin-top: 100px;
+        margin-top: 110px;
         width: 90vw;
     }
 
@@ -124,7 +123,7 @@ const StyledHero = styled.div`
         scroll-margin-top: 200px;
         width: 80vw;
         height: 100%;
-        margin-top: 100px;
+        margin-top: 130px;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
@@ -164,8 +163,10 @@ const StyledHero = styled.div`
             justify-content: flex-start;
             align-items: flex-start;
             text-align: left;  
-            h1 {
-                margin-top: 0;
+            h2 {
+                margin-top: 15px;
+                margin-bottom: 0;
+                font-size: 28px;
                 font-weight: 900;
                 text-align: left; 
             }
@@ -175,8 +176,10 @@ const StyledHero = styled.div`
             justify-content: flex-start;
             align-items: flex-end;
             text-align: right;  
-            h1 {
-                margin-top: 0;
+            h2 {
+                margin-top: 15px;
+                margin-bottom: 0;
+                font-size: 28px;
                 font-weight: 900;
                 text-align: right; 
             }
