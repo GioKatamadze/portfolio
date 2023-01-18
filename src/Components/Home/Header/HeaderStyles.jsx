@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledHeader = styled.div`
     width: 100vw;
     height: 70px;
-    position: fixed;
+    position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const StyledHero = styled.div`
     width: 90vw;
-    height: max-content;
-    margin-top: 100px;
+    height: auto;
+    margin-top: 30px;
     scroll-margin-top: 100px;
     padding: 20px 20px 30px 20px;
     display: flex;
@@ -115,15 +115,15 @@ const StyledHero = styled.div`
         }
 
     @media (min-width: 600px) {
-        margin-top: 110px;
+        margin-top: 40px;
         width: 90vw;
     }
 
     @media (min-width: 1000px) {
-        scroll-margin-top: 200px;
         width: 80vw;
         height: 100%;
-        margin-top: 130px;
+        margin-top: 70px;
+        scroll-margin-top: 130px;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;

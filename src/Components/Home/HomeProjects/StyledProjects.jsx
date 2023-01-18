@@ -44,7 +44,6 @@ export const StyledWrapper = styled.div`
             font-size: 20px;
         }
     }
-
     @media (min-width: 1000px) {
         width: 80vw;
         scroll-margin-top: 100px;

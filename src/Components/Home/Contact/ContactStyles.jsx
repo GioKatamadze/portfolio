@@ -14,7 +14,6 @@ const StyledContact = styled.div`
         background-color: white;
         border: 1px solid transparent;
         border-radius: 5px;
-        box-shadow: var(--box-shadow);
         overflow: hidden;
         padding: 5px;
     }

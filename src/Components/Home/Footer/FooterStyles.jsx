@@ -2,9 +2,9 @@ import styled from "styled-components";
 import profileImage from "./profileImg.png"
 
 export const StyledFooter = styled.div`
-bottom: 0;
+    bottom: 0;
     width: 100vw;
-    height: max-content;
+    height: 170px;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -15,22 +15,32 @@ bottom: 0;
 
     #title-box {
       display: flex;
-      justify-content: center;
+      height: 100%;
+      justify-content: space-between;
       align-items: flex-start;
       flex-direction: column;
       margin-left: 5vw;
     }
 
-    #title-box h2 {
+    #title-box p {
+      text-align: left;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.8px;
+      color: #ffffff99;
+    }
+
+    #titleLogo h2 {
       margin-left: 10px;
-      margin-top: 5px;
       color: #FFFFFF;
       transition: .2s;
       font-weight: 700;
       font-size: 20px;
     }
 
-    .titleLogo {
+    #titleLogo {
+      text-decoration: none;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -77,8 +87,8 @@ bottom: 0;
 `
 export const StyledLinks = styled.div`
         display: flex;
-        height: max-content;
-        justify-content: flex-end;
+        height: 100%;
+        justify-content: space-between;
         align-items: flex-end;
         flex-direction: column;
         margin-right: 5vw;
@@ -87,7 +97,7 @@ export const StyledLinks = styled.div`
             color: #FFFFFF;
             font-weight: 700;
             font-size: 20px;
-            margin: 5px 0;
+            margin-bottom: 5px;
             letter-spacing: 1px;
         }
 
@@ -120,6 +130,11 @@ export const StyledLinks = styled.div`
             color: #ffffff;
           }
         }
+    @media (min-width: 800px) {
+        .contactLink {
+          display: none;
+        }
+    }
     @media (min-width: 1000px) {
         margin-right: 10vw;
     }

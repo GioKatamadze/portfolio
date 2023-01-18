@@ -3,7 +3,6 @@ import GithubLink from './GithubLink.jsx';
 import LinkedinLink from './LinkedinLink.jsx';
 import React from "react";
 import { HashLink } from 'react-router-hash-link';
-import { Link, useLocation } from 'react-router-dom';
 
 
 const Footer = (props) => {
@@ -12,10 +11,13 @@ const Footer = (props) => {
       <StyledFooter>
 
         <div id='title-box'>
-          <div className="titleLogo">
+
+          <HashLink id='titleLogo' smooth to="/#home">
             <div className="profileImage"></div>
             <h2>Gio Katamadze</h2>
-          </div>
+          </HashLink>
+
+          <p>Designed and Built by <br/> Gio Katamadze. 2023</p>
 
           <div className='links'>
           <a href="https://github.com/GioKatamadze" target="_blank">
@@ -24,6 +26,7 @@ const Footer = (props) => {
           <a href="https://www.linkedin.com/in/gio-katamadze-a409931a7" target="_blank">
             <LinkedinLink />
           </a>
+
           </div>
 
         </div>
@@ -38,12 +41,12 @@ const Footer = (props) => {
                   <HashLink className="nostyle" smooth to="/#about">About</HashLink>
               </div>
 
-              <div className="linkDiv">
+              <div className="linkDiv contactLink" >
                   <HashLink className="nostyle" smooth to="/#contact">Contact</HashLink>
               </div>
 
               <div className="linkDiv">
-                  <Link to={'/projects'} state={{ from: "/" }} className='nostyle' >Projects</Link>
+                  <HashLink className='nostyle' smooth to="/projects">Projects</HashLink>
               </div>
         </StyledLinks>
 

@@ -9,7 +9,7 @@ const DesktopStyledContact = styled.div`
     align-items: center;
     background-color: #2792f030;
     margin-top: 55px;
-    padding: 30px 0; 
+    padding: 40px 0; 
 
     .formWrapper {
         width: 90%;
@@ -17,9 +17,9 @@ const DesktopStyledContact = styled.div`
         background-color: white;
         border: 1px solid transparent;
         border-radius: 5px;
-        box-shadow: var(--box-shadow);
+        box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
         overflow: hidden;
-        padding: 5px;
+        padding: 10px;
     }
 
     .form {

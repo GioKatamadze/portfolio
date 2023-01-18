@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
     width: 100vw;
-    margin-top: 100px;
+    margin-top: 30px;
     scroll-margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @media (min-width: 800px) {
-        margin-top: 60px;
+        margin-top: 25px;
     }
     @media (min-width: 1000px) {
-        margin-top: 90px;
+        margin-top: 40px;
     }
 `
 
@@ -175,7 +175,7 @@ export const StyledItem = styled.div`
 
     :active, :hover {
         border: 4px solid #3e3b40f0; 
-        box-shadow: #65e7cb -8px 10px;
+        box-shadow: #65e7cb -8px 8px;
         scroll-margin-top: 100px;
 
         .description {
@@ -214,7 +214,7 @@ export const StyledItem = styled.div`
         :hover {
             cursor: pointer;
             border: 3px solid #3e3b40f0; 
-            box-shadow: #65e7cb -8px 10px;
+            box-shadow: #65e7cb -5px 6px;
         }
         .arrow {
             display: none;

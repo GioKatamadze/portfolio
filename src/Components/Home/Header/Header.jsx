@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Menu } from "./Menu.jsx";
 import { DesktopMenu } from "./DesktopMenu.jsx";
 import StyledHeader from "./HeaderStyles.jsx";
@@ -24,10 +24,11 @@ const Header = (props) => {
     return (
       <StyledHeader>
 
-        <Link id='title-box' smooth to={'/'} state={{ from: "/" }} >
-          <div className="profileImage"></div>
-          <h2>Gio Katamadze</h2>
-        </Link>
+        <HashLink id='title-box' smooth to="/#home">
+            <div className="profileImage"></div>
+            <h2>Gio Katamadze</h2>
+        </HashLink>
+
         <div className="menuIcon">
           {menuStatus ? (
             <Close onClick={closeMenu} />

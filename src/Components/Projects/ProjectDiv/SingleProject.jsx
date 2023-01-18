@@ -9,9 +9,10 @@ import GitHub from "./GithubLink.jsx"
 
 const SingleProject = (props) => {
     const projects = useSelector((state) => state.projects.items);
+    const numDescending = [...projects].sort((a, b) => b.project_id - a.project_id);
     const dispatch = useDispatch();
 
-    const EachProject = projects.map((project, projectIndex) => {
+    const EachProject = numDescending.map((project) => {
         const iconArray = project.tech_icon
         const nameArray = project.tech_name
         const contentsArray = project.content

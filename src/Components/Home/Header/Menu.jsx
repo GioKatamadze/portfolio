@@ -2,7 +2,6 @@ import styled from "styled-components";
 import GithubLink from '../../../SVG/GithubLink.jsx';
 import LinkedinLink from '../../../SVG/LinkedinLink.jsx';
 import { HashLink } from 'react-router-hash-link';
-import { Link, useLocation } from 'react-router-dom';
 
 const StyledMenu = styled.div`
   width: 50%;
@@ -59,7 +58,7 @@ export const Menu = (props) => {
       <StyledMenu>
             <HashLink className="nostyle" smooth to="/#home">Home</HashLink>
             <HashLink className="nostyle" smooth to="/#about">About</HashLink>
-            <Link to={'/projects'} state={{ from: "/" }} className='nostyle' >Projects</Link>
+            <HashLink className='nostyle' smooth to="/projects">Projects</HashLink>
             <HashLink className="nostyle" smooth to="/#contact">Contact</HashLink>
 
         <div className='links'>

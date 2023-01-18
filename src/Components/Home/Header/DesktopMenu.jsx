@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React from "react";
 import { HashLink } from 'react-router-hash-link';
-import { Link, useLocation } from 'react-router-dom';
 
 const StyledLinks = styled.div`
     display: none;
@@ -70,7 +69,7 @@ export const DesktopMenu = () => {
             </div>
 
             <div className="linkDiv">
-            <Link to={'/projects'} state={{ from: "/" }} className='nostyle' >Projects</Link>
+            <HashLink className='nostyle' smooth to="/projects">Projects</HashLink>
             <div className="hr"></div>
             </div>
         </StyledLinks>
