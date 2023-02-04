@@ -47,6 +47,7 @@ export const StyledItem = styled.div`
     }
 
     .description {
+        width: 100%;
         height: auto;
         transition: .2s;
         display: flex;
@@ -83,6 +84,7 @@ export const StyledItem = styled.div`
 
     .contentItem p {
         margin-top: 10px;
+        width: 100%;
         font-family: 'Lato', sans-serif;
         font-size: 15px;
         color: #1c1c1ce1;
@@ -107,6 +109,11 @@ export const StyledItem = styled.div`
             width: 18px;
             height: 18px;
         }
+    }
+
+    .pWrapper {
+        width: 100%;
+        height: max-content;
     }
 
     .eachItem:hover {

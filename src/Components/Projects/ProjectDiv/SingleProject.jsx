@@ -73,7 +73,7 @@ const SingleProject = (props) => {
                             </div>
 
                             <h2>Users Are Able To</h2>
-                            <div>
+                            <div className='pWrapper' >
                                 {contentsArray.map((content) => {
                                     return (        
                                         <div className='contentItem' key={content}>
