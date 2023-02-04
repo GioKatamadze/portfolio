@@ -17,7 +17,7 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledItem = styled.div`
-    scroll-margin-top: 100px;
+    scroll-margin-top: 0;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -53,6 +53,7 @@ export const StyledItem = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 15px;
     }
 
     .description h2 {
@@ -175,11 +176,6 @@ export const StyledItem = styled.div`
     :active, :hover {
         border: 4px solid #3e3b40f0; 
         box-shadow: #65e7cb -8px 8px;
-        scroll-margin-top: 100px;
-
-        .description {
-            margin-top: 15px;
-        }
     }
 
     @media (min-width: 500px) {

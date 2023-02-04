@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const StyledMenu = styled.div`
   width: 50%;
-  height: 100vh;
+  height: 100%;
   margin: 0 0 auto auto ;
   padding: 10px;
   padding-top: 60px;

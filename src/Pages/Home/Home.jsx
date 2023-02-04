@@ -10,6 +10,7 @@ import styled from "styled-components";
 
 const HomePage = styled.div`
     width: 100vw;
+    height: max-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;

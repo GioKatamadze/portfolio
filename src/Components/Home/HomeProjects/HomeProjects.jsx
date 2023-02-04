@@ -64,7 +64,7 @@ const ControlledCarousel = (props) => {
                 <Carousel activeIndex={index} onSelect={handleSelect} className="carouselitem">
                     {CustomCarouselItem}
                 </Carousel>
-                <HashLink className='button' smooth to="/projects">View All Projects</HashLink>
+                <HashLink className='button' smooth to="/projects#top">View All Projects</HashLink>
             </StyledCarousel>
         </StyledWrapper>
     )

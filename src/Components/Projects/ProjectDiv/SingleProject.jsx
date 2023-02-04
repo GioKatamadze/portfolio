@@ -106,10 +106,6 @@ const SingleProject = (props) => {
                             </div>
                         </div>
 
-                        <div className='arrow'>
-                            <Arrow />
-                        </div>
-
                     </StyledItem>
         )
     });

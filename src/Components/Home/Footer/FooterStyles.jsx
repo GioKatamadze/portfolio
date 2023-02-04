@@ -2,7 +2,6 @@ import styled from "styled-components";
 import profileImage from "./profileImg.png"
 
 export const StyledFooter = styled.div`
-    bottom: 0;
     width: 100vw;
     height: 170px;
     padding: 20px 0;
