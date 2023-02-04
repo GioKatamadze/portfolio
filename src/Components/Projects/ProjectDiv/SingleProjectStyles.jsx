@@ -47,8 +47,7 @@ export const StyledItem = styled.div`
     }
 
     .description {
-        visibility: hidden;
-        height: 0;
+        height: auto;
         transition: .2s;
         display: flex;
         justify-content: center;
@@ -179,8 +178,6 @@ export const StyledItem = styled.div`
         scroll-margin-top: 100px;
 
         .description {
-            visibility: visible;
-            height: auto;
             margin-top: 15px;
         }
     }
