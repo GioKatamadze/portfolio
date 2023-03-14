@@ -43,7 +43,7 @@ const Hero = (props) => {
     return (
         <StyledHero id='home'>
             <div className='titleWrapper'>
-                <h2>Full Stack Developer</h2>
+                <h2>Software Engineer</h2>
                 <div className='techWrapper'>
                     <div className='techItems'>{listItems}</div>
                 </div>
