@@ -199,9 +199,7 @@ const StyledHero = styled.div`
 
         .li:hover {
             transition: .2s;
-            transform: translate(1px, -2px);
-            border: 2px solid #2998fa; 
-            box-shadow: #A7F0E0 -5px 5px;
+            box-shadow: #A7F0E0 -4px 4px;
             cursor: pointer;
         }
 

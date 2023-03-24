@@ -1,7 +1,9 @@
 import instance from "./axios.js";
 
-const getProjects = () => {
+export const getProjects = () => {
   return instance.get("/projects");
 };
 
-export default getProjects;
+export const getSingleProject = (id) => {
+  return instance.get("/projects/" + id);
+};

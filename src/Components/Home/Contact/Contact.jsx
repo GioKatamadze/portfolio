@@ -1,44 +1,56 @@
 import { useState } from "react";
+import { Comment } from "react-loader-spinner";
 import StyledContact from "./ContactStyles.jsx";
+import toast from 'react-hot-toast';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const [waiting, setWaiting] = useState(false)
+  const [mailerState, setMailerState] = useState({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
 
-const [mailerState, setMailerState] = useState({
-    name: "",
-    emailValue: "",
-    subject: "",
-    message: "",
-  });
-
-function handleStateChange(e) {
-setMailerState((prevState) => ({
-    ...prevState,
-    [e.target.name]: e.target.value,
-}));
-}
-
-  const sendEmail = async (e) => {
+  function sendEmail(e) {
+    setWaiting(true);
     e.preventDefault();
-
-    const response = await fetch("https://portfolio-api-production-99be.up.railway.app/api/sendemail", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ mailerState }),
-      })
-        .then((res) => res.json())
-        .then(() => {
-            console.log(mailerState)
-          setMailerState({
-            emailValue: "",
-            name: "",
-            subject: "",
-            message: "",
-          });
+    emailjs.send("service_fi04ed3","template_fsh7zob",{
+      from_name: mailerState.name,
+      from_email: mailerState.email,
+      message: mailerState.message,
+      subject: mailerState.subject,
+      }, '3BuT0s5qDGZtVj6mH')
+      .then((result) => {
+        console.log(result.text);
+        toast.success('Email Sent!')
+        setWaiting(false)
+        setMailerState({
+          email: "",
+          name: "",
+          subject: "",
+          message: "",
         });
-  };
+      }, (error) => {
+        console.log(error.text);
+        toast.error("Can not send email...")
+        setWaiting(false)
+        setMailerState({
+          email: "",
+          name: "",
+          subject: "",
+          message: "",
+        });
+      });
+  }
 
+  function handleStateChange(e) {
+  setMailerState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+  }));
+  }
 
   return (
     <StyledContact id="contact2">
@@ -56,8 +68,8 @@ setMailerState((prevState) => ({
                 type="email"
                 placeholder="Email"
                 required
-                name="emailValue"
-                value={mailerState.emailValue}
+                name="email"
+                value={mailerState.email}
                 onChange={handleStateChange} />
 
             <input
@@ -76,7 +88,22 @@ setMailerState((prevState) => ({
                 onChange={handleStateChange} 
                 />
 
-                <button type="submit">Send Email</button>
+                <button type="submit">
+                  {waiting === true ? 
+                    <Comment
+                    visible={true}
+                    height="40"
+                    width="40"
+                    ariaLabel="comment-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="comment-wrapper"
+                    color="#2792f0"
+                    backgroundColor="#ffffff"
+                  />
+              :
+              "Send Email"
+              }
+                </button>
             </form>
         </div>
     </StyledContact>

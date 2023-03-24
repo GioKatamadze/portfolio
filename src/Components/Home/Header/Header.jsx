@@ -22,7 +22,7 @@ const Header = (props) => {
     };
 
     return (
-      <StyledHeader>
+      <StyledHeader id='header'>
 
         <HashLink id='title-box' smooth to="/#home">
             <div className="profileImage"></div>

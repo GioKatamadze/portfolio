@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
     width: 100vw;
-    margin-top: 30px;
-    scroll-margin-top: 100px;
+    height: max-content;
+    margin-top: 20px;
+    scroll-margin-top: 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +18,7 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledItem = styled.div`
-    scroll-margin-top: 0;
+    scroll-margin-top: 1px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -27,11 +28,14 @@ export const StyledItem = styled.div`
     border-radius: 10px;
     background-color: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     transition: .2s;
 
+    border: 4px solid #3e3b40f0; 
+    box-shadow: #65e7cb -8px 8px;
+
     #projectTitle {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 700;
             height: auto;
             text-align: center;
@@ -145,9 +149,9 @@ export const StyledItem = styled.div`
         padding: 5px;
         margin-bottom: 10px;
         border-radius: 8px;
-        text-decoration: none;
         transition: .2s;
         box-shadow: #0de2d7 -4px 4px;
+        text-decoration: none;
         :active, :hover {
             cursor: pointer;
             background-color: #0b726c;
@@ -181,23 +185,15 @@ export const StyledItem = styled.div`
         display: none;
     }
 
-    :active, :hover {
-        border: 4px solid #3e3b40f0; 
-        box-shadow: #65e7cb -8px 8px;
-    }
-
     .forBigScreen{
         display: none;
     }
-
-    .hideOnMobileLink, .hideOnMobileDescription {display: none !important; }
-    .hideOnDesktop {display: flex !important;}
 
     @media (min-width: 500px) {
         #projectTitle {
             font-size: 25px;
         }
-        .thumbnailImage, .description, .techItems {
+        .thumbnailImage {
             width: 70vw;
         }
     }
@@ -221,8 +217,6 @@ export const StyledItem = styled.div`
         }
         :hover {
             cursor: pointer;
-            border: 3px solid #3e3b40f0; 
-            box-shadow: #65e7cb -5px 6px;
         }
         .arrow {
             display: none;
@@ -293,10 +287,7 @@ export const StyledItem = styled.div`
                 border: 1.5px solid #2998fa; 
                 box-shadow: #A7F0E0 -4px 4px;
                 cursor: pointer;
-        }
-        .hideOnMobileLink {display: flex !important;}
-        .hideOnMobileDescription {display: block !important;}
-        .hideOnDesktop {display: none !important;}
+            }
     }
 
     @media (min-width: 1000px) {

@@ -4,24 +4,22 @@ import { fetchTech } from '../../../store/actions/techActions.js';
 import { fetchSkill } from '../../../store/actions/skillActions.js';
 import StyledHero from './HeroStyles.jsx';
 
-
-const Hero = (props) => {
+const Hero = (prps) => {
     const techs = useSelector((state) => state.techs.items);
     const skills = useSelector((state) => state.skills.items);
+    const newTechs = [...techs]
     const dispatch = useDispatch();
-    
-    const listItems = techs.map((tech) => {
-        return (        
-            <div className='li' key={tech.name}>
-                <img
-                    src={process.env.REACT_APP_API_URL + "/icons/" + tech.icon}
-                    alt="carousel slide"
-                />
-                {tech.name}
-            </div>
-        ) 
-    });
-
+    const listItems = newTechs
+    .sort((a, b) => a.tech_id - b.tech_id)
+    .map((tech) => (
+      <div className='li' key={tech.tech_id}>
+        <img
+          src={process.env.REACT_APP_API_URL + "/icons/" + tech.icon}
+          alt="carousel slide"
+        />
+        {tech.name}
+      </div>
+    ));
     const listSkills = skills.map((skill) => {
         return (        
             <div className='li' key={skill.name}>
@@ -34,7 +32,6 @@ const Hero = (props) => {
         ) 
     });
     
-
     useEffect(() => {
         dispatch(fetchTech())
         dispatch(fetchSkill());
@@ -48,18 +45,15 @@ const Hero = (props) => {
                     <div className='techItems'>{listItems}</div>
                 </div>
             </div>
-            
             <div className='andWrapper' >
                 <div className='and'>&</div>
             </div>
-
             <div className='titleWrapper2'>
                 <h2>Business Manager</h2>
                 <div className='techWrapper2'>
                     <div className='techItems2'>{listSkills}</div>
                 </div>
             </div>
-
         </StyledHero>
     )
 }
