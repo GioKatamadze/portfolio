@@ -124,77 +124,27 @@ const StyledHero = styled.div`
         height: 100%;
         margin-top: 70px;
         scroll-margin-top: 130px;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 20px 30px 30px 30px;
+        padding: 40px 100px;
         transform: translate(2px, -2px);
         border: 4px solid #3e3b4099; 
         box-shadow: #A7F0E0 -10px 10px;
         position: relative;
 
-        .techWrapper {
-            margin-top: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-direction: column;
+        .techWrapper, .techWrapper2 {
+            margin-top: 15px;
         }
 
-        .techWrapper2 {
-            margin-top: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
-        .titleWrapper {
-            margin-top: 0;
-            width: 45%;
-        }
-
-        .titleWrapper2 {
-            margin-top: 0;
-            width: 45%;
-        }
-
-        .titleWrapper, .techWrapper {
-            justify-content: flex-start;
-            align-items: flex-start;
-            text-align: left;  
+        .titleWrapper, .titleWrapper2{
             h2 {
-                margin-top: 15px;
                 margin-bottom: 0;
                 font-size: 28px;
                 font-weight: 900;
-                text-align: left; 
             }
         }
 
-        .titleWrapper2, .techWrapper2 {
-            justify-content: flex-start;
-            align-items: flex-end;
-            text-align: right;  
-            h2 {
-                margin-top: 15px;
-                margin-bottom: 0;
-                font-size: 28px;
-                font-weight: 900;
-                text-align: right; 
-            }
-        }
-
-        .techItems {
-            padding: 30px 0;
-            width: 90%;
-            justify-content: flex-start;
-        }
-
-        .techItems2 {
-            padding: 30px 0;
-            width: 90%;
-            justify-content: flex-end;
+        .li {
+            padding-right: 6px;
+            margin: 4px 4px;
         }
 
         .li:hover {
@@ -208,8 +158,7 @@ const StyledHero = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            margin-top: -30px;
+            margin-top: 25px;
         }
 
         .and {

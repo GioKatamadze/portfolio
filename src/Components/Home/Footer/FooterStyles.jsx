@@ -82,7 +82,13 @@ export const StyledFooter = styled.div`
       margin-top: 0;
       font-size: 25px;
     }
+    @media (min-width: 1000px) {
+      padding: 20px 0;
+      #title-box {
+          margin-left: 10vw;
+        }
     }
+}
 `
 export const StyledLinks = styled.div`
         display: flex;
